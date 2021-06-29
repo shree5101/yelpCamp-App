@@ -7,3 +7,10 @@ module.exports.campgroundValidationSchema = Joi.object({
   image: Joi.string().required(),
   description: Joi.string().required(),
 });
+
+module.exports.reviewValidationSchema = Joi.object({
+  review: Joi.object({
+    rating: Joi.number().required(),
+    body: Joi.string().required(),
+  }).required(),
+});
