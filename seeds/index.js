@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const Campground = require("../models/campgrounds");
+const Campground = require("../models/campground");
 const cities = require("./cities");
 const { places, descriptors } = require("./seedHelper");
 
@@ -24,7 +24,8 @@ const seedDB = async () => {
 
   for (let i = 0; i < 50; i++) {
     const camp = new Campground({
-      location: `${cities[i].city}, ${cities[i].state}`,
+      author: "60dd958223df7a5cebbe1bff",
+      location: `${cities[price].city}, ${cities[price].state}`,
       title: `${sample(descriptors)} ${sample(places)}`,
       image: "https://source.unsplash.com/collection/483251",
       price,

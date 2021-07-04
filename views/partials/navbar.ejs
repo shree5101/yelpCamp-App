@@ -25,5 +25,18 @@
         </li>
       </ul>
     </div>
+
+    <% if(!currentUser) { %>
+    <div class="navbar-nav">
+      <a href="/login" class="nav-link ms-auto">Login</a>
+    </div>
+    <div class="navbar-nav">
+      <a href="/register" class="nav-link ms-auto">Register</a>
+    </div>
+    <% } else { %>
+    <div class="navbar-nav">
+      <a href="/logout" class="nav-link ms-auto">Logout</a>
+    </div>
+    <% } %>
   </div>
 </nav>
